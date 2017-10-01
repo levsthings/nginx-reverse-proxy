@@ -2,7 +2,7 @@
 
 ## Repository
 
-Latest version: `levsthings/nginx-reverse-proxy:testing`
+Latest version: `levsthings/nginx-reverse-proxy`
 
 Image lives [here.](https://hub.docker.com/r/levsthings/nginx-reverse-proxy/)
 
@@ -15,7 +15,7 @@ Include this image in your `docker-compose.yml`:
 version: '3'
 services:
     nginx:
-        image: 'levsthings/nginx-reverse-proxy:testing'
+        image: 'levsthings/nginx-reverse-proxy'
         links: 
             - app:app
         ports:
