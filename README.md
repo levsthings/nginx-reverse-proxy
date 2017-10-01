@@ -1,6 +1,5 @@
 <h1 align='center'>Ship An NGINX Reverse Proxy</h1>
 
-
 ## Quick Usage
 
 *to be written*
