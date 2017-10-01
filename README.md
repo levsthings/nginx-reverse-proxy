@@ -1,24 +1,33 @@
 <h1 align='center'>Ship An NGINX Reverse Proxy</h1>
 
-## Quick Usage
+## Repository
 
-*to be written*
+Latest version: `levsthings/nginx-reverse-proxy:testing`
 
-### Development Mode:
+Image lives [here.](https://hub.docker.com/r/levsthings/nginx-reverse-proxy/). 
 
-*to be written*
+## Usage
 
-### Production Mode:
+Include this image in your `docker-compose.yml`:
 
-*to be written*
-
-### Deployment Flow:
-
-*to be written*
-
-### TODOS:
-
-**Reverse Proxy:**
-- [ ] Add NGINX for proxy server
-- [ ] Publish Docker Image
-- [ ] Add it to to the stack
+```yaml
+## Example:
+version: '3'
+services:
+    nginx:
+        image: 'levsthings/nginx-reverse-proxy:testing'
+        links: 
+            - app:app
+        ports:
+            - '80:80'
+        networks:
+            - frontend
+    app:
+        build: .
+        ports:
+            - '3000'
+        networks:
+            - frontend
+networks:
+    frontend: null
+```
