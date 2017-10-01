@@ -4,7 +4,7 @@
 
 Latest version: `levsthings/nginx-reverse-proxy:testing`
 
-Image lives [here.](https://hub.docker.com/r/levsthings/nginx-reverse-proxy/). 
+Image lives [here.](https://hub.docker.com/r/levsthings/nginx-reverse-proxy/)
 
 ## Usage
 
@@ -22,6 +22,7 @@ services:
             - '80:80'
         networks:
             - frontend
+    ## Minimum settings of the app you'll reverse proxy to:
     app:
         build: .
         ports:
